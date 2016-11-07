@@ -1,16 +1,24 @@
-function change()
+function slider()
 {
 	var hidecb = $("#openNav").hide();
-	if (hidecb.checked())
-	{
-		$("body").css("background", "blue");
-	}
+	
 
 
 	var background = $(".slider").css("background", "#ccc")
 	.css("width", "240");
 	var height = $(".slider").css("height", "100%");
 
+
+}
+
+function topSlider()
+{
+
+}
+
+
+function btmSlider()
+{
 
 }
 
@@ -31,18 +39,25 @@ $(document).ready(function()
 	if($("nav").hasClass("slider"))
 	{
 		resetNav();
-		change();
+		slider();
 
 	}
 
 	else if($("nav").hasClass("sliderTop"))
 	{
+		resetNav();
+		topSlider();
+	}
 
+	else if($("nav").hasClass("sliderBtm"))
+	{
+		resetNav();
+		btmSlider();
 	}
 
 	else
 	{
-
+		return console.log(error);
 	}
 });
 
