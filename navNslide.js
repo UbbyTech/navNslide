@@ -1,13 +1,13 @@
 function slider()
 {
-	var hidecb = $("#openNav").hide();
 	
-
-
 	var background = $(".slider").css("background", "#ccc")
 	.css("width", "240");
 	var height = $(".slider").css("height", "100%");
-
+	var height = $(".slider").css("width", "240");
+	var pos1 = $(".slider").css("position", "absolute");
+	var pos2 = $(".slider").css("left", "-240");
+	
 
 }
 
