@@ -1,11 +1,25 @@
 function slider()
 {
 	
-	var background = $(".slider").css("background", "#ccc")
-	.css("width", "240");
-	var height = $(".slider").css("height", "100%");
-	var pos1 = $(".slider").css("position", "absolute");
-	var pos2 = $(".slider").css("left", "-240");
+	$('.slider').css({
+		position: 'absolute',
+		// left: '-240',
+		height: '100%',
+		width: '240',
+		background: '#407AC7'
+	});
+
+	$('.slider a').css({
+		color: '#B4DAD6',
+		"text-decoration": 'none'
+	});
+
+	$('#openNav').ani(function(event) {
+		$('.slider').css({
+			position: 'absolute',
+			left: '-240'
+		});
+	});	
 
 
 }
@@ -21,11 +35,6 @@ function btmSlider()
 
 }
 
-function openNav()
-{
-	var pos1 = $(".slider").css("position", "absolute");
-	var pos2 = $(".slider").css("left", "0");
-}
 
 function closeNav()
 {
