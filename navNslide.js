@@ -5,21 +5,49 @@ function slider()
 		position: 'absolute',
 		// left: '-240',
 		height: '100%',
-		width: '240',
+		width: '240px',
 		background: '#407AC7'
 	});
-
-	$('.slider a').css({
-		color: '#B4DAD6',
-		"text-decoration": 'none'
+	
+	$('.slider li').css({
+		height: '50px',
+		
 	});
 
-	$('#openNav').ani(function(event) {
-		$('.slider').css({
-			position: 'absolute',
-			left: '-240'
-		});
-	});	
+	$('.slider li a').css({
+		color: '#B4DAD6',
+		"text-decoration": 'none',
+		"text-align": 'center',
+		"border-bottom": '1px solid black',
+		"line-height": '50px'
+	});
+
+	
+	
+
+	$('#openNav').click(function() {
+
+		if($(this).is(':checked'))
+		{
+			$('.slide').css({
+				position: 'absolute',
+				left: '-240px'
+			});
+		}
+		
+		else if(!$(this).is(':checked'))
+		{
+			$('.slide').css({
+				position: 'absolute',
+				left: '0'
+			});
+		}
+
+		else
+		{
+			return false;
+		}
+	});
 
 
 }
@@ -49,8 +77,9 @@ function resetNav()
 		.css("padding", "0")
 		.css("border", "none")
 		.css("outline", "none")
-		.css("font-family", "sans-serif")
-		.css("color", "black");
+		.css("font-family", "sans-serif");
+
+
 }
 
 
