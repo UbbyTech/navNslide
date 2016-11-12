@@ -133,7 +133,7 @@ function resetNav()
 		.css("padding", "0")
 		.css("border", "none")
 		.css("outline", "none")
-		.css("font-family", "sans-serif");
+		.css("font-family", "sans-serif, Verdana, Geneva");
 
 
 	var menuIcon = $(".slideBtn").css({
