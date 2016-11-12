@@ -1,5 +1,8 @@
 function slider()
 {
+
+	// custom styling for vertical slide nav menu
+
 	
 	$('.slider').css({
 		position: 'absolute',
@@ -23,6 +26,11 @@ function slider()
 	});
 
 
+	$('#openNav').hide(); // hiding input checkbox
+
+
+
+
 	// for opening and closing the side navigation
 
 	$('#openNav').click(function(event) {
@@ -32,7 +40,8 @@ function slider()
 		{
 			$('.slider').css({
 				position: 'absolute',
-				left: '0'
+				left: '0',
+				transition: '2s'
 			});
 		}
 
@@ -40,7 +49,8 @@ function slider()
 		{
 			$('.slider').css({
 				position: 'absolute',
-				left: '-240'
+				left: '-240',
+				transition: '1s'
 			});
 		}
 	});
@@ -72,6 +82,12 @@ function resetNav()
 		.css("border", "none")
 		.css("outline", "none")
 		.css("font-family", "sans-serif");
+
+
+	var menuIcon = $(".slideBtn").css({
+		display: 'block',
+		"font-size" : '2em'
+	});
 
 
 }
