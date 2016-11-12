@@ -58,7 +58,59 @@ function slider()
 
 function topSlider()
 {
+	// custom styling for vertical slide nav menu
 
+	
+	$('.slider').css({
+		position: 'absolute',
+		top: '-240',
+		height: '240px',
+		width: '100%',
+		background: '#407AC7'
+	});
+	
+	$('.slider li').css({
+		height: '50px',
+		
+	});
+
+	$('.slider li a').css({
+		color: '#B4DAD6',
+		"text-decoration": 'none',
+		"text-align": 'center',
+		"border-bottom": '1px solid black',
+		"line-height": '50px'
+	});
+
+
+	$('#openNav').hide(); // hiding input checkbox
+
+
+
+
+	// for opening and closing the side navigation
+
+	$('#openNav').click(function(event) {
+		var isChecked = $(this).is('#openNav:checked');
+
+		if(isChecked == true)
+		{
+			$('.slider').css({
+				position: 'absolute',
+				top: '0',
+				transition: '2s'
+			});
+		}
+
+		else
+		{
+			$('.slider').css({
+				position: 'absolute',
+				top: '-240',
+				transition: '1s'
+			});
+		}
+	});
 }
 
 
