@@ -3,7 +3,7 @@ function slider()
 	
 	$('.slider').css({
 		position: 'absolute',
-		// left: '-240',
+		left: '-240',
 		height: '100%',
 		width: '240px',
 		background: '#407AC7'
@@ -22,22 +22,15 @@ function slider()
 		"line-height": '50px'
 	});
 
-	
-	
 
-	$('#openNav').click(function() {
+	// for opening and closing the side navigation
 
-		if($(this).is(':checked'))
+	$('#openNav').click(function(event) {
+		var isChecked = $(this).is('#openNav:checked');
+
+		if(isChecked == true)
 		{
-			$('.slide').css({
-				position: 'absolute',
-				left: '-240px'
-			});
-		}
-		
-		else if(!$(this).is(':checked'))
-		{
-			$('.slide').css({
+			$('.slider').css({
 				position: 'absolute',
 				left: '0'
 			});
@@ -45,11 +38,12 @@ function slider()
 
 		else
 		{
-			return false;
+			$('.slider').css({
+				position: 'absolute',
+				left: '-240'
+			});
 		}
 	});
-
-
 }
 
 function topSlider()
