@@ -59,7 +59,7 @@ function slider()
 
 
 
-// custom styling for vertical slide nav menu
+// custom styling for horizonal slide nav menu
 
 function topSlider()
 {
@@ -74,7 +74,7 @@ function topSlider()
 	
 	$('.slider-top li').css({
 		float: 'left',
-		height: '50px',
+		height: '100px',
 		width: '10%'
 		
 	});
@@ -83,8 +83,8 @@ function topSlider()
 		color: '#B4DAD6',
 		"text-decoration": 'none',
 		"text-align": 'center',
-		"border-bottom": '1px solid black',
-		"line-height": '50px'
+		"border-right": '1px solid black',
+		"line-height": '100px'
 	});
 
 
@@ -125,7 +125,7 @@ function topSlider()
 			$('.slidebtn').css({
 				position: 'absolute',
 				top: '0',
-				transition: '3s'
+				transition: '2s'
 			});
 		}
 	});
@@ -145,7 +145,29 @@ function closeNav()
 
 function resetNav()
 {
-	var reset = $(".slider, .slider ul, .slider ul li, .slider ul li a")
+
+	// reset for vertical slide nav menu
+	var reset1 = $(".slider, .slider ul, .slider ul li, .slider ul li a") 
+		.css("display", "block")
+		.css("margin", "0")
+		.css("padding", "0")
+		.css("border", "none")
+		.css("outline", "none")
+	
+		.css("font-family", "sans-serif, Verdana, Geneva");
+
+	// reset for horizontal slide nav menu
+	var reset2 = $(".slider-top, .slider-top ul, .slider-top ul li, .slider-top ul li a")
+		.css("display", "block")
+		.css("margin", "0")
+		.css("padding", "0")
+		.css("border", "none")
+		.css("outline", "none")
+		.css("font-family", "sans-serif, Verdana, Geneva");
+
+
+	// reset for bottom slide nav menu
+	var reset3 = $(".slider-bottom, .slider-bottom ul, .slider-bottom ul li, .slider-bottom ul li a")
 		.css("display", "block")
 		.css("margin", "0")
 		.css("padding", "0")
