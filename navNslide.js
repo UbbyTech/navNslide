@@ -1,8 +1,7 @@
+// custom styling for vertical slide nav menu
+
 function slider()
 {
-
-	// custom styling for vertical slide nav menu
-
 	
 	$('.slider').css({
 		position: 'absolute',
@@ -56,25 +55,31 @@ function slider()
 	});
 }
 
+
+
+
+
+// custom styling for vertical slide nav menu
+
 function topSlider()
 {
-	// custom styling for vertical slide nav menu
-
 	
-	$('.slider').css({
+	$('.slider-top').css({
 		position: 'absolute',
-		top: '-240',
-		height: '240px',
+		top: '-100',
+		height: '100px',
 		width: '100%',
 		background: '#407AC7'
 	});
 	
-	$('.slider li').css({
+	$('.slider-top li').css({
+		float: 'left',
 		height: '50px',
+		width: '10%'
 		
 	});
 
-	$('.slider li a').css({
+	$('.slider-top li a').css({
 		color: '#B4DAD6',
 		"text-decoration": 'none',
 		"text-align": 'center',
@@ -95,19 +100,32 @@ function topSlider()
 
 		if(isChecked == true)
 		{
-			$('.slider').css({
+			$('.slider-top').css({
 				position: 'absolute',
 				top: '0',
+				transition: '2s'
+			});
+
+			$('.slidebtn').css({
+				position: 'absolute',
+				top: '100px',
+				"z-index": '2',
 				transition: '2s'
 			});
 		}
 
 		else
 		{
-			$('.slider').css({
+			$('.slider-top').css({
 				position: 'absolute',
-				top: '-240',
+				top: '-100',
 				transition: '1s'
+			});
+
+			$('.slidebtn').css({
+				position: 'absolute',
+				top: '0',
+				transition: '3s'
 			});
 		}
 	});
@@ -155,7 +173,7 @@ $(document).ready(function()
 
 	}
 
-	else if($("nav").hasClass("sliderTop"))
+	else if($("nav").hasClass("slider-top"))
 	{
 		resetNav();
 		topSlider();
