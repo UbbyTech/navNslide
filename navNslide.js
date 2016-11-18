@@ -135,22 +135,23 @@ function topSlider()
 function btmSlider()
 {
 
-	$('.slider-top').css({
-		position: 'absolute',
+	$('.slider-btm').css({
+		position: 'fixed',
+		left: '0',
 		bottom: '-100',
+		"z-index": '3',
 		height: '100px',
 		width: '100%',
 		background: '#407AC7'
 	});
 	
-	$('.slider-top li').css({
+	$('.slider-btm li').css({
 		float: 'left',
 		height: '100px',
 		width: '10%'
-		
 	});
 
-	$('.slider-top li a').css({
+	$('.slider-btm li a').css({
 		color: '#B4DAD6',
 		"text-decoration": 'none',
 		"text-align": 'center',
@@ -171,31 +172,33 @@ function btmSlider()
 
 		if(isChecked == true)
 		{
-			$('.slider-top').css({
+			$('.slider-btm').css({
 				position: 'absolute',
 				bottom: '0',
 				transition: '2s'
 			});
 
-			$('.slidebtn').css({
-				position: 'absolute',
-				bottom: '100px',
-				"z-index": '2',
+			$('.slidebtm').css({
+				position: 'fixed',
+				bottom: '100',
+				"z-index": '3',
 				transition: '2s'
 			});
 		}
 
 		else
 		{
-			$('.slider-top').css({
+			$('.slider-btm').css({
 				position: 'absolute',
 				bottom: '-100',
 				transition: '1s'
 			});
 
 			$('.slidebtn').css({
-				position: 'absolute',
-				bottom: '0',
+				position: 'fixed',
+				left: '0',
+				"z-index": '3',
+				bottom: '100',
 				transition: '2s'
 			});
 		}
@@ -261,7 +264,7 @@ $(document).ready(function()
 		topSlider();
 	}
 
-	else if($("nav").hasClass("sliderBtm"))
+	else if($("nav").hasClass("slider-btm"))
 	{
 		resetNav();
 		btmSlider();
