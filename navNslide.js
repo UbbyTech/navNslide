@@ -136,9 +136,9 @@ function btmSlider()
 {
 
 	$('.slider-btm').css({
-		position: 'absolute',
-		left: '0',
+		position: 'fixed',
 		bottom: '-100',
+		left: '0',
 		"z-index": '3',
 		height: '100px',
 		width: '100%',
@@ -148,7 +148,7 @@ function btmSlider()
 	$('.slider-btm li').css({
 		float: 'left',
 		height: '100px',
-		width: '10%'
+		width: '100px'
 	});
 
 	$('.slider-btm li a').css({
@@ -173,33 +173,26 @@ function btmSlider()
 		if(isChecked == true)
 		{
 			$('.slider-btm').css({
-				position: 'absolute',
+				position: 'fixed',
 				bottom: '0',
 				transition: '2s'
 			});
 
 			$('.slidebtm').css({
-				position: 'fixed',
-				bottom: '100',
-				"z-index": '3',
-				transition: '2s'
+				position: 'relative'
 			});
 		}
 
 		else
 		{
 			$('.slider-btm').css({
-				position: 'absolute',
+				position: 'fixed',
 				bottom: '-100',
 				transition: '1s'
 			});
 
 			$('.slidebtn').css({
-				position: 'fixed',
-				left: '0',
-				"z-index": '3',
-				bottom: '100',
-				transition: '2s'
+				position: 'relative'
 			});
 		}
 	});
@@ -230,7 +223,7 @@ function resetNav()
 
 
 	// reset for bottom slide nav menu
-	var reset3 = $(".slider-bottom, .slider-bottom ul, .slider-bottom ul li, .slider-bottom ul li a")
+	var reset3 = $(".slider-btm, .slider-btm ul, .slider-btm ul li, .slider-btm ul li a")
 		.css("display", "block")
 		.css("margin", "0")
 		.css("padding", "0")
