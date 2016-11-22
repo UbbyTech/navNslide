@@ -136,7 +136,7 @@ function btmSlider()
 {
 
 	$('.slider-btm').css({
-		position: 'fixed',
+		position: 'absolute',
 		left: '0',
 		bottom: '-100',
 		"z-index": '3',
