@@ -231,7 +231,7 @@ function resetNav()
 		.css("outline", "none")
 		.css("font-family", "sans-serif, Verdana, Geneva");
 
-
+	// default reset styling for menu icon
 	var menuIcon = $(".slideBtn").css({
 		display: 'block',
 		"font-size" : '2em'
@@ -265,7 +265,8 @@ $(document).ready(function()
 
 	else
 	{
-		return console.log(error);
+		var error = console.log();
+		alert(error);
 	}
 });
 
