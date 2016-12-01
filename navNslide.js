@@ -24,6 +24,15 @@ function slider()
 		"line-height": '50px'
 	});
 
+	$('.slider li a').hover(function() {
+		$(this).css({
+			background: '#ccc',
+			color: '#000000'
+		});
+	}, function() {
+		$(this).css('background', 'none');
+	});
+
 
 	$('#openNav').hide(); // hiding input checkbox
 
@@ -85,6 +94,15 @@ function topSlider()
 		"text-align": 'center',
 		"border-right": '1px solid black',
 		"line-height": '100px'
+	});
+
+	$('.slider-top li a').hover(function() {
+		$(this).css({
+			background: '#ccc',
+			color: '#000000'
+		});
+	}, function() {
+		$(this).css('background', 'none');
 	});
 
 
@@ -158,6 +176,16 @@ function btmSlider()
 		"border-right": '1px solid black',
 		"line-height": '100px'
 	});
+
+	$('.slider-btm li a').hover(function() {
+		$(this).css({
+			background: '#ccc',
+			color: '#000000'
+		});
+	}, function() {
+		$(this).css('background', 'none');
+	});
+
 
 
 	$('#openNav').hide(); // hiding input checkbox
