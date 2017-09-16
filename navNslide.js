@@ -1,7 +1,18 @@
+// user var declarations and settings
+
+var menu = document.getElementById('mainNav');
+var topMenu = document.getElementById('topNav');
+
+
+
+
+
+
+
+
 // custom styling for vertical slide nav menu
 
-function slider()
-{
+function slider() {
 	
 	$('.slider').css({
 		position: 'absolute',
@@ -65,13 +76,15 @@ function slider()
 }
 
 
+// custom styling for the right slide nav menu
+function sliderRight() {
 
+}
 
 
 // custom styling for horizonal slide nav menu
 
-function topSlider()
-{
+function topSlider() {
 	
 	$('.slider-top').css({
 		position: 'absolute',
@@ -150,8 +163,7 @@ function topSlider()
 }
 
 
-function btmSlider()
-{
+function btmSlider() {
 
 	$('.slider-btm').css({
 		position: 'fixed',
@@ -227,10 +239,9 @@ function btmSlider()
 }
 
 
-function resetNav()
+function resetNav()  // resets values for  top, bottom, right, and left nav properties
 {
 
-	// reset for vertical slide nav menu
 	var reset1 = $(".slider, .slider ul, .slider ul li, .slider ul li a") 
 		.css("display", "block")
 		.css("margin", "0")
@@ -240,7 +251,6 @@ function resetNav()
 	
 		.css("font-family", "sans-serif, Verdana, Geneva");
 
-	// reset for horizontal slide nav menu
 	var reset2 = $(".slider-top, .slider-top ul, .slider-top ul li, .slider-top ul li a")
 		.css("display", "block")
 		.css("margin", "0")
@@ -249,8 +259,6 @@ function resetNav()
 		.css("outline", "none")
 		.css("font-family", "sans-serif, Verdana, Geneva");
 
-
-	// reset for bottom slide nav menu
 	var reset3 = $(".slider-btm, .slider-btm ul, .slider-btm ul li, .slider-btm ul li a")
 		.css("display", "block")
 		.css("margin", "0")
@@ -258,6 +266,15 @@ function resetNav()
 		.css("border", "none")
 		.css("outline", "none")
 		.css("font-family", "sans-serif, Verdana, Geneva");
+
+	var reset4 = $(".slider-right, .slider-right ul, .slider-right ul li, .slider-right ul li a")
+		.css("display", "block")
+		.css("margin", "0")
+		.css("padding", "0")
+		.css("border", "none")
+		.css("outline", "none")
+		.css("font-family", "Verdana, Geneva");
+
 
 	// default reset styling for menu icon
 	var menuIcon = $(".slideBtn").css({
@@ -289,6 +306,12 @@ $(document).ready(function()
 	{
 		resetNav();
 		btmSlider();
+	}
+
+	else if($("nav").hasClass("slider-right	"))
+	{
+		resetNav();
+		sliderRight();
 	}
 
 	else
