@@ -77,7 +77,75 @@ function slider() {
 
 
 // custom styling for the right slide nav menu
-function sliderRight() {
+function rightSlider() {
+
+	$('.slider-right').css({
+		position: 'absolute',
+		right: 0,
+		background: '#407AC7'
+
+	});
+
+	$('.slider-right li').css({
+		height: '50px',
+		
+	});
+
+	$('.slider-right li a').css({
+		color: '#B4DAD6',
+		"text-decoration": 'none',
+		"text-align": 'center',
+		"border-bottom": '1px solid black',
+		"line-height": '50px'
+	});
+
+	$('.slider-right li a').hover(function() {
+		$(this).css({
+			background: '#ccc',
+			color: '#000000'
+		});
+	}, function() {
+		$(this).css('background', 'none');
+	});
+
+
+	$('#openNav').hide(); // hiding input checkbox
+
+
+	$('#openNav').click(function(event) {
+		var isChecked = $(this).is('#openNav:checked');
+
+		if(isChecked == true)
+		{
+			$('.slider-right').css({
+				position: 'absolute',
+				right: '0',
+				transition: '2s'
+			});
+
+			$('.slidebtn').css({
+				position: 'absolute',
+				right: '-240',
+				"z-index": '2',
+				transition: '2s'
+			});
+		}
+
+		else
+		{
+			$('.slider-top').css({
+				position: 'absolute',
+				right: '-240',
+				transition: '1s'
+			});
+
+			$('.slidebtn').css({
+				position: 'absolute',
+				right: '0',
+				transition: '2s'
+			});
+		}
+	});
 
 }
 
@@ -87,11 +155,11 @@ function sliderRight() {
 function topSlider() {
 	
 	$('.slider-top').css({
-		position: 'absolute',
+		position: 'absolute', // absolute pos for horizontal navs, and fixed for vertical navs
 		top: '-100',
 		height: '100px',
 		width: '100%',
-		background: '#407AC7'
+		background-color: '#407AC7'
 	});
 	
 	$('.slider-top li').css({
@@ -273,7 +341,7 @@ function resetNav()  // resets values for  top, bottom, right, and left nav prop
 		.css("padding", "0")
 		.css("border", "none")
 		.css("outline", "none")
-		.css("font-family", "Verdana, Geneva");
+		.css("font-family", "sans-serif, Verdana, Geneva");
 
 
 	// default reset styling for menu icon
@@ -293,7 +361,6 @@ $(document).ready(function()
 	{
 		resetNav();
 		slider();
-
 	}
 
 	else if($("nav").hasClass("slider-top"))
@@ -308,10 +375,10 @@ $(document).ready(function()
 		btmSlider();
 	}
 
-	else if($("nav").hasClass("slider-right	"))
+	else if($("nav").hasClass("slider-right"))
 	{
 		resetNav();
-		sliderRight();
+		rightSlider();
 	}
 
 	else
@@ -320,4 +387,3 @@ $(document).ready(function()
 		alert(error);
 	}
 });
-
