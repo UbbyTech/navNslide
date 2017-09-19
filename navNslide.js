@@ -1,19 +1,4 @@
-// user var declarations and settings
-
-var menu = document.getElementById('mainNav');
-var topMenu = document.getElementById('topNav');
-
-
-
-
-
-
-
-
-// custom styling for vertical slide nav menu
-
 function slider() {
-	
 	$('.slider').css({
 		position: 'absolute',
 		left: '-240',
@@ -21,18 +6,18 @@ function slider() {
 		width: '240px',
 		background: '#407AC7'
 	});
-	
+
 	$('.slider li').css({
 		height: '50px',
-		
+		width: '100%'
 	});
 
 	$('.slider li a').css({
 		color: '#B4DAD6',
-		"text-decoration": 'none',
-		"text-align": 'center',
-		"border-bottom": '1px solid black',
-		"line-height": '50px'
+		'text-decoration': 'none',
+		'text-align': 'center',
+		'border-bottom': '1px solid black',
+		'line-height': '50px'
 	});
 
 	$('.slider li a').hover(function() {
@@ -48,9 +33,6 @@ function slider() {
 	$('#openNav').hide(); // hiding input checkbox
 
 
-
-
-	// for opening and closing the side navigation
 
 	$('#openNav').click(function(event) {
 		var isChecked = $(this).is('#openNav:checked');
@@ -81,22 +63,24 @@ function rightSlider() {
 
 	$('.slider-right').css({
 		position: 'absolute',
-		right: 0,
+		right: '-240',
+		height: '100%',
+		width: '240px',
 		background: '#407AC7'
 
 	});
 
 	$('.slider-right li').css({
 		height: '50px',
-		
+		width: '100%'
 	});
 
 	$('.slider-right li a').css({
 		color: '#B4DAD6',
-		"text-decoration": 'none',
-		"text-align": 'center',
-		"border-bottom": '1px solid black',
-		"line-height": '50px'
+		'text-decoration': 'none',
+		'text-align': 'center',
+		'border-bottom': '1px solid black',
+		'line-height': '50px'
 	});
 
 	$('.slider-right li a').hover(function() {
@@ -122,26 +106,13 @@ function rightSlider() {
 				right: '0',
 				transition: '2s'
 			});
-
-			$('.slidebtn').css({
-				position: 'absolute',
-				right: '-240',
-				"z-index": '2',
-				transition: '2s'
-			});
 		}
 
 		else
 		{
-			$('.slider-top').css({
+			$('.slider-right').css({
 				position: 'absolute',
 				right: '-240',
-				transition: '1s'
-			});
-
-			$('.slidebtn').css({
-				position: 'absolute',
-				right: '0',
 				transition: '2s'
 			});
 		}
@@ -153,28 +124,28 @@ function rightSlider() {
 // custom styling for horizonal slide nav menu
 
 function topSlider() {
-	
+
 	$('.slider-top').css({
 		position: 'absolute', // absolute pos for horizontal navs, and fixed for vertical navs
 		top: '-100',
 		height: '100px',
 		width: '100%',
-		background-color: '#407AC7'
+		'background-color': '#407AC7'
 	});
-	
+
 	$('.slider-top li').css({
 		float: 'left',
 		height: '100px',
 		width: '10%'
-		
+
 	});
 
 	$('.slider-top li a').css({
 		color: '#B4DAD6',
-		"text-decoration": 'none',
-		"text-align": 'center',
-		"border-right": '1px solid black',
-		"line-height": '100px'
+		'text-decoration': 'none',
+		'text-align': 'center',
+		'border-right': '1px solid black',
+		'line-height': '100px'
 	});
 
 	$('.slider-top li a').hover(function() {
@@ -208,7 +179,7 @@ function topSlider() {
 			$('.slidebtn').css({
 				position: 'absolute',
 				top: '100px',
-				"z-index": '2',
+				'z-index': '2',
 				transition: '2s'
 			});
 		}
@@ -237,12 +208,12 @@ function btmSlider() {
 		position: 'fixed',
 		bottom: '-100',
 		left: '0',
-		"z-index": '3',
+		'z-index': '3',
 		height: '100px',
 		width: '100%',
 		background: '#407AC7'
 	});
-	
+
 	$('.slider-btm li').css({
 		float: 'left',
 		height: '100px',
@@ -251,10 +222,10 @@ function btmSlider() {
 
 	$('.slider-btm li a').css({
 		color: '#B4DAD6',
-		"text-decoration": 'none',
-		"text-align": 'center',
-		"border-right": '1px solid black',
-		"line-height": '100px'
+		'text-decoration': 'none',
+		'text-align': 'center',
+		'border-right': '1px solid black',
+		'line-height': '100px'
 	});
 
 	$('.slider-btm li a').hover(function() {
@@ -310,44 +281,43 @@ function btmSlider() {
 function resetNav()  // resets values for  top, bottom, right, and left nav properties
 {
 
-	var reset1 = $(".slider, .slider ul, .slider ul li, .slider ul li a") 
-		.css("display", "block")
-		.css("margin", "0")
-		.css("padding", "0")
-		.css("border", "none")
-		.css("outline", "none")
-	
-		.css("font-family", "sans-serif, Verdana, Geneva");
+	var reset1 = $('.slider, .slider ul, .slider ul li, .slider ul li a')
+		.css('display', 'block')
+		.css('margin', '0')
+		.css('padding', '0')
+		.css('border', 'none')
+		.css('outline', 'none')
+		.css('font-family', 'sans-serif, Verdana, Geneva');
 
-	var reset2 = $(".slider-top, .slider-top ul, .slider-top ul li, .slider-top ul li a")
-		.css("display", "block")
-		.css("margin", "0")
-		.css("padding", "0")
-		.css("border", "none")
-		.css("outline", "none")
-		.css("font-family", "sans-serif, Verdana, Geneva");
+	var reset2 = $('.slider-top, .slider-top ul, .slider-top ul li, .slider-top ul li a')
+		.css('display', 'block')
+		.css('margin', '0')
+		.css('padding', '0')
+		.css('border', 'none')
+		.css('outline', 'none')
+		.css('font-family', 'sans-serif, Verdana, Geneva');
 
-	var reset3 = $(".slider-btm, .slider-btm ul, .slider-btm ul li, .slider-btm ul li a")
-		.css("display", "block")
-		.css("margin", "0")
-		.css("padding", "0")
-		.css("border", "none")
-		.css("outline", "none")
-		.css("font-family", "sans-serif, Verdana, Geneva");
+	var reset3 = $('.slider-btm, .slider-btm ul, .slider-btm ul li, .slider-btm ul li a')
+		.css('display', 'block')
+		.css('margin', '0')
+		.css('padding', '0')
+		.css('border', 'none')
+		.css('outline', 'none')
+		.css('font-family', 'sans-serif, Verdana, Geneva');
 
-	var reset4 = $(".slider-right, .slider-right ul, .slider-right ul li, .slider-right ul li a")
-		.css("display", "block")
-		.css("margin", "0")
-		.css("padding", "0")
-		.css("border", "none")
-		.css("outline", "none")
-		.css("font-family", "sans-serif, Verdana, Geneva");
+	var reset4 = $('.slider-right, .slider-right ul, .slider-right ul li, .slider-right ul li a')
+		.css('display', 'block')
+		.css('margin', '0')
+		.css('padding', '0')
+		.css('border', 'none')
+		.css('outline', 'none')
+		.css('font-family', 'sans-serif, Verdana, Geneva');
 
 
 	// default reset styling for menu icon
-	var menuIcon = $(".slideBtn").css({
+	var menuIcon = $('.slideBtn').css({
 		display: 'block',
-		"font-size" : '2em'
+		'font-size' : '2em'
 	});
 
 
@@ -357,25 +327,25 @@ function resetNav()  // resets values for  top, bottom, right, and left nav prop
 
 $(document).ready(function()
 {
-	if($("nav").hasClass("slider"))
+	if($('nav').hasClass('slider'))
 	{
 		resetNav();
 		slider();
 	}
 
-	else if($("nav").hasClass("slider-top"))
+	else if($('nav').hasClass('slider-top'))
 	{
 		resetNav();
 		topSlider();
 	}
 
-	else if($("nav").hasClass("slider-btm"))
+	else if($('nav').hasClass('slider-btm'))
 	{
 		resetNav();
 		btmSlider();
 	}
 
-	else if($("nav").hasClass("slider-right"))
+	else if($('nav').hasClass('slider-right'))
 	{
 		resetNav();
 		rightSlider();
