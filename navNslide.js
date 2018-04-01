@@ -32,7 +32,7 @@ function slider() {
 
 	$('#openNav').hide(); // hiding input checkbox
 
-
+ 
 
 	$('#openNav').click(function(event) {
 		var isChecked = $(this).is('#openNav:checked');
